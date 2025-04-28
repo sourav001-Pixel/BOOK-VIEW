@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOK HOUSE - Your Literary Haven</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #2c5f2d;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #97bc62;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background-color: #eae7d6;
+        }
+
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .book-card {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .book-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #2c5f2d;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📚 BOOK HOUSE </h1>
+        <p>Your Gateway to Endless Stories (Sourav Dhabak)🛠</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <div class="container">
+            <h2>Discover Your Next Favorite Book 📒</h2>
+            <p>Explore our vast collection of fiction, non-fiction, and rare editions</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Featured Books</h2>
+        <div class="book-grid">
+            <!-- 20 Book Cards -->
+           <script>
+    const books = [
+        { title: "Python Book", author: "Jason R.Briggs", price: "$ FREE", category: "computer", 
+          img: "PYTHON.jpeg", link: "https://drive.google.com/file/d/1BBr7Qp0vXUF3It30V_8wl1gc19tUvjKB/view?usp=drivesdk" },
+        
+        { title: "HTML Book", author: "Sarah Johnson", price: "$ FREE", category: "computer", 
+          img: "HTML.jpeg", link: "https://drive.google.com/file/d/0B2ntYqCgNmgJQjU5SWFYRFRPZ0E/view?usp=drivesdk&resourcekey=0-rlmeM_FAx97KjBlU2ugAZQ" },
+        
+        { title: "Java Book", author: "Michael Chen", price: "$FREE", category: "science-fiction", 
+          img: "JAVA.jpeg", link: "https://drive.google.com/file/d/1V_6SsmnZaZZGpqD3Su82zW7uOe7gHpo1/view?usp=drivesdk" },
+        
+        { title: "Eathical Hacking", author: "Emily Davis", price: "$FREE", category: "psychology", 
+          img: "EATHICAL HACKING.jpeg", link: "https://drive.google.com/file/d/1-4vdi-ailLvVbT4E6SKVuqaFjDJoRPy4/view?usp=drivesdk" },
+        
+        { title: "Php", author: "Robert Brown", price: "$FREE", category: "COMPUTER", 
+          img: "php.jpeg", link: "https://drive.google.com/file/d/0B2ntYqCgNmgJMHl0c0M5MWEtOVU/view?usp=drivesdk&resourcekey=0-y3KVRuzEjKLEw9_MFxQJdg" },
+        
+        { title: "Joomla", author: "Emily Davis", price: "$FREE", category: "COMPUTER", 
+          img: "joomal.jpeg", link: "https://drive.google.com/file/d/0B2ntYqCgNmgJb1p0dWhKLXNZSVU/view?usp=drivesdk&resourcekey=0-_v0pz2xfRDVKecc_4-1fhQ" },
+        { title: "Css", author: "Emily Davis", price: "$FREE", category: "COMPUTER", 
+          img: "css.jpeg", link: "https://drive.google.com/file/d/0B2ntYqCgNmgJWHMxZWZvTlZPQTQ/view?usp=drivesdk&resourcekey=0-44yglRTHOU8XxA8-HcHRxQ" },
+		  { title: "WEB DEVLOPMENT", author: "Emily Davis", price: "FREE", category: "COMPUTER", 
+          img: "web devlopment.jpeg", link: "https://drive.google.com/file/d/0B2ntYqCgNmgJSmdIRktqMS1VbGs/view?usp=drivesdk&resourcekey=0-ddUsI0cE3XJB-3_1p_cKXw" },
+		  { title: "Computer Basic", author: "Emily Davis", price: "$ FREE", category: "Computer", 
+          img: "COMPUTER.jpeg", link: "https://drive.google.com/file/d/16JBtKMOx5Kq0_PB2Bh_X-u4AlgJjoZhF/view?usp=drivesdk" },
+		  { title: "Kotlin", author: "Emily Davis", price:" $ FREE", category: "COMPUTER", 
+          img: "kotlin.jpeg", link: "https://drive.google.com/file/d/16Do14bO_NTHVg2n0wIIqW6iaowcHSqaa/view?usp=drivesdk" },
+		  { title: "Softwer", author: "Emily Davis", price: "$FREE", category: "COMPUTER", 
+          img: "softwer.jpeg", link: "https://drive.google.com/file/d/16JBtKMOx5Kq0_PB2Bh_X-u4AlgJjoZhF/view?usp=drivesdk" },
+    ];
+
+    books.forEach(book => {
+        document.write(`
+            <div class="book-card">
+                <a href="${book.link}" target="_blank">
+                    <img src="${book.img}" alt="${book.title} Cover">
+                </a>
+                <h3>${book.title}</h3>
+                <p>Author: ${book.author}</p>
+                <p>${book.price}</p>
+                <a href="${book.link}" target="_blank" style="display: inline-block; padding: 0.5rem 1rem; background-color: #2c5f2d; color: white; text-decoration: none; border-radius: 5px;">View Details</a>
+            </div>
+        `);
+    });
+</script>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 BOOK HOUSE - All rights reserved</p>
+        <p>📧 souravdhabak340@gmail.com | 📞 (+91)9339614674</p>
+        <div>
+            <a href="#"><img src="social-icon-facebook.png" alt="Facebook" style="width: 30px; margin: 0.5rem;"></a>
+            <a href="#"><img src="social-icon-twitter.png" alt="Twitter" style="width: 30px; margin: 0.5rem;"></a>
+            <a href="#"><img src="social-icon-instagram.png" alt="Instagram" style="width: 30px; margin: 0.5rem;"></a>
+        </div>
+    </footer>
+</body>
+</html>
